@@ -49,11 +49,6 @@ Reactive, manual security operations don't scale — analysts can't watch every 
 ---
 
 ## 🏗️ Architecture
-
-<p align="center">
-  <img src="architecture-diagram.png" alt="Incident Response Automation Architecture (AWS)" width="100%" />
-</p>
-
 ### How the components interact
 
 The pipeline is organized in four layers that hand off to one another automatically:
