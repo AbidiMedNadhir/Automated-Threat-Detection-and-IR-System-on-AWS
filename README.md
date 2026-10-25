@@ -5,10 +5,8 @@
 <br/>
 
 ![University](https://img.shields.io/badge/TEK--UP%20University-Tunis,%20Tunisia-4cc9f0?style=flat-square&logo=graduation-cap&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-2ea44f?style=flat-square&logo=checkmarx&logoColor=white)
 ![Type](https://img.shields.io/badge/Type-Cloud%20Security%20%2F%20SOAR-e63946?style=flat-square)
 ![Cloud](https://img.shields.io/badge/Cloud-Amazon%20Web%20Services-FF9900?style=flat-square&logo=amazon-aws&logoColor=white)
-![License](https://img.shields.io/badge/Purpose-Educational%20Only-0078D4?style=flat-square)
 
 </div>
 
@@ -29,10 +27,10 @@ Built as part of the Cloud Security module (Sécurité des Systèmes Informatiqu
 Reactive, manual security operations don't scale — analysts can't watch every alert in real time, and attackers exploit exactly that delay. This project demonstrates how a small set of native AWS services can be wired together into an **autonomous containment system**, turning security monitoring into security *action*. It reflects the direction modern SOC and Cloud Security Engineering roles are heading: less manual triage, more orchestrated, code-defined response.
 
 **Key engineering principles applied:**
-- 🎯 **Event-driven design** — every step is triggered by the previous one, no polling, no manual steps
-- 🔐 **Least privilege by default** — every IAM role is scoped to exactly what its component needs
-- 🧊 **Forensics without re-exposure** — evidence is collected *after* isolation, over an API channel (SSM), never by reopening network access
-- 📦 **Evidence integrity** — reports and snapshots are encrypted at rest and stored in a locked-down, private bucket
+🎯 **Event-driven design**: every step is triggered automatically by the previous one, with no polling and no manual steps
+🔐 **Least privilege by default**: every IAM role is scoped to exactly what its component needs, nothing more
+🧊 **Forensics without re-exposure**: evidence is collected after isolation, over an API channel (SSM), without ever reopening network access
+📦 **Evidence integrity**: reports and snapshots are encrypted at rest and stored in a locked-down, private bucket
 
 ---
 
@@ -53,7 +51,7 @@ Reactive, manual security operations don't scale — analysts can't watch every 
 ## 🏗️ Architecture
 
 <p align="center">
-  <img src="architecture-diagram.png" alt="Automated Incident Response Architecture on AWS" width="100%" />
+  <img src="architecture-diagram.png" alt="Incident Response Automation Architecture (AWS)" width="100%" />
 </p>
 
 ### How the components interact
@@ -155,13 +153,6 @@ EC2 Target ──► Flow Logs / CloudTrail / DNS Logs
 ## 📈 Outcome
 
 A compromised EC2 instance is detected, network-isolated, forensically captured and reported — **autonomously, in under 90 seconds**, with zero manual steps and a complete audit trail of every action taken.
-
----
-
-## 📂 Repository Contents
-
-- `architecture-diagram.png` — full pipeline architecture diagram
-- `README.md` — this document
 
 ---
 
